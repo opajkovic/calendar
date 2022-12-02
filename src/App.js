@@ -7,13 +7,13 @@ function App() {
  
 const [date, setDate] = useState(new Date());
 const [showTime, setShowTime] = useState(false) 
-
+const [disabledCalendar,setDisabledCalendar] = useState(false)
 
 return (
   <div className='app'>
     <h1 className='header'>React Calendar</h1>
-    <div>
-     <Calendar onChange={setDate} value={date} onClickDay={() => setShowTime(true)}/>
+    <div >
+   {!disabledCalendar &&  <Calendar onChange={setDate} value={date} onClickDay={() => setShowTime(true)} />}
     </div>
  
     {date.length > 0 ? (
@@ -26,11 +26,11 @@ return (
     </p>
            ) : (
     <p>
-       <span>Default selected date:</span>{date.toDateString()}
+       <span>Selected date:</span>{date.toDateString()}
    </p> 
           )
    }
-   <Time showTime={showTime} date={date}/>
+   <Time showTime={showTime} date={date} setDisabledCalendar={setDisabledCalendar}/>
 
  </div>
   )
