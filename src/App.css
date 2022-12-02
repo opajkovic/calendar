@@ -39,7 +39,7 @@
   }
   
   .App-link {
-    color: #61dafb;
+    color: #428597;
   }
   
   
@@ -50,7 +50,7 @@
   .react-calendar { 
     width: 700px;
     max-width: 100%;
-    background-color: rgb(131, 125, 125);
+    background-color: rgb(153, 223, 245);
     color: white;
     border-radius: 8px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
